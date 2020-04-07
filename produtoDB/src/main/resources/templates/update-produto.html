@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head>
+        <title>Atualizar Produto</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <div >
+        <form action="#" th:action="@{/produtos/update/{codigo}(codigo=${produto.codigo})}" th:object="${produto}" method="post"><br>
+            <div>
+                <h5 >Alterar cadastro de Produtos</h5>
+            </div>
+            <div >
+                <label for="descricao">Descrição</label> <input
+                type="text" th:field="*{descricao}" id="descricao"
+                placeholder="Descrição"> <br>
+
+            <label for="marca" >Marca</label> <input
+                type="text" th:field="*{marca}" id="marca"
+                placeholder="Marca"> <br>
+
+            <label for="validade">Validade</label> <input
+                type="text" th:field="*{validade}"
+                id="validade" placeholder="Validade"> <br>
+            
+                <button  type="submit" >Salvar</button><br><br>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
